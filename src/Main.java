@@ -61,5 +61,14 @@ public class Main {
         tier2Orders.forEach(order -> tier2Products.addAll(order.getProducts()));
         logger.info("Ecco la lista di prodotti ordinati da clienti di tier 2:");
         logger.info(tier2Products.toString());
+
+        //Esempio di cast da cui si ottiene un effetto simile a Math.floor()
+
+        /*double primoNumero = 5.937658;
+        int secondoNumero = (int) primoNumero;
+
+        System.err.println("primoNumero= "+primoNumero);
+        System.err.println("secondoNumero= "+secondoNumero);
+        System.out.println("buonanotte");*/
     }
 }
