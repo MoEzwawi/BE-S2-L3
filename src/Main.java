@@ -4,6 +4,7 @@ import entities.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -56,5 +57,9 @@ public class Main {
 
         // ********************** ESERCIZIO 4 *********************************
         List<Order> tier2Orders = ordersList.stream().filter(o->o.getCustomer().getTier()==2).toList();
+        List<Product> tier2Products = new ArrayList<>();
+        tier2Orders.forEach(order -> tier2Products.addAll(order.getProducts()));
+        logger.info("Ecco la lista di prodotti ordinati da clienti di tier 2:");
+        logger.info(tier2Products.toString());
     }
 }
